@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.containor {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.leftpane {
+  border: #05dddd;
+  border-width: 5px;
+  align-items: center;
+  width: 30%;
+  height: 100vh;
+  float: left;
+  background-color: #333; 
+  border-collapse: collapse;
+  color: #fff;
+}
+
+.rightpane {
+  border: #05dddd;
+  border-width: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100vh;
+  float: right;
+  background-color: #fff; 
+  border-collapse: collapse;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 3px;
+}
+
+.gallery_img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.current-img {
+  width: 100%;
+  height: 75%;
+  object-fit: scale-down;
+  align-items: center;
+  background-position: top center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.current {
+  display: flex;
+  flex-direction: row;
+}
+
+.image-view {
+  margin-left: 35px;
+  margin-right: 35px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.slider {
+  width: 100%;
+  cursor: pointer;
+}
+
+.sidebar {
+  align-items: center;
+  
+  width: 20%;
+  background-color: #333;
+  height: 100vh;
+  float: right;
+  border-left: 1px solid hsl(265, 100%, 56%);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  color: white;
+}
+
+.sidebar-item {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: #f6f6f6; 
+  padding: 1rem;
+  position: relative;
+  transition: background-color 150ms;
+}
+
+.sidebar-item:hover,
+.sidebar-item:focus {
+  background-color: hsl(189, 100%, 76%);
+}
+
+.sidebar-item::after {
+  content: ' ';
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  bottom: 0;
+  height: 1px;
+  background-color: hsl(265, 100%, 46%);
+}
+
+.sidebar-item:last-child::after {
+  display: none;
+}
+
+.btn {
+  background-color: #05dddd; 
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px 5px 10px;
+  align-content: center;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: #8ae1fe; 
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.top-buttons {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
